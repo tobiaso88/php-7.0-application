@@ -20,9 +20,14 @@ class Application
 
     protected function loadEnviroment()
     {
-        $repository = RepositoryBuilder::createWithNoAdapters()
-            ->addAdapter(EnvConstAdapter::class)
-            ->addWriter(PutenvAdapter::class)
+        $repository = RepositoryBuilder::create()
+            ->withReaders([
+                new EnvConstAdapter(),
+            ])
+            ->withWriters([
+                new EnvConstAdapter(),
+                new PutenvAdapter(),
+            ])
             ->immutable()
             ->make();
 
