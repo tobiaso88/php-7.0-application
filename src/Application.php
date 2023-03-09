@@ -37,7 +37,6 @@ class Application
 
     public function terminate()
     {
-        echo "Hello world!";
-        var_dump(getenv('APP_NAME'));
+        echo "Hello " . env('APP_NAME') . "!";
     }
 }
