@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "illuminate/support": "^5.5"
+        "illuminate/support": "^5.5",
+        "vlucas/phpdotenv": "^4.3"
     },
     "config": {
         "allow-plugins": {
