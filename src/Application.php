@@ -10,4 +10,9 @@ class Application
     {
         $this->basePath = $basePath;
     }
+
+    public function terminate()
+    {
+        echo "Hello world!";
+    }
 }
