@@ -19,5 +19,8 @@
         "allow-plugins": {
             "kylekatarnls/update-helper": true
         }
+    },
+    "require-dev": {
+        "deployer/deployer": "^6.0"
     }
 }
