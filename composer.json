@@ -1,0 +1,23 @@
+{
+    "name": "tobiaso88/php-7.0-application",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tobias Olsson",
+            "email": "info@tobias-olsson.se"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}
