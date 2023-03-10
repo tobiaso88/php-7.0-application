@@ -16,12 +16,21 @@ set('git_tty', true);
 set('shared_files', [
 	'.env'
 ]);
-set('shared_dirs', []);
+
+set('shared_dirs', [
+    'storage',
+    'pict/logo',
+    'portfolio/sds',
+    'sdsDownload',
+    'sdsLogotypes',
+    'tmp',
+]);
 
 // Writable dirs by web server 
 set('writable_dirs', [
-	'storage',
+	//
 ]);
+
 set('allow_anonymous_stats', false);
 // set('writable_use_sudo', true);
 set('writable_chmod_recursive', true);
