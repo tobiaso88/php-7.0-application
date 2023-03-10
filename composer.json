@@ -26,6 +26,7 @@
         }
     },
     "require-dev": {
-        "deployer/deployer": "^6.0"
+        "deployer/deployer": "^6.0",
+        "symfony/var-dumper": "^3.4"
     }
 }
