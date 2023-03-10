@@ -19,8 +19,8 @@ set('shared_files', [
 
 set('shared_dirs', [
     'storage',
-    'pict/logo',
-    'portfolio/sds',
+    'pict',
+    'portfolio',
     'sdsDownload',
     'sdsLogotypes',
     'tmp',
