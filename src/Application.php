@@ -6,8 +6,9 @@ use Dotenv\Dotenv;
 use Dotenv\Repository\Adapter\EnvConstAdapter;
 use Dotenv\Repository\Adapter\PutenvAdapter;
 use Dotenv\Repository\RepositoryBuilder;
+use Illuminate\Container\Container;
 
-class Application
+class Application extends Container
 {
     protected $basePath;
 
@@ -16,6 +17,7 @@ class Application
         $this->basePath = $basePath;
 
         $this->loadEnviroment();
+        $this->registerBaseBindings();
     }
 
     protected function loadEnviroment()
@@ -33,6 +35,13 @@ class Application
 
         $dotenv = Dotenv::create($repository, $this->basePath);
         $dotenv->load();
+
+    protected function registerBaseBindings()
+    {
+        static::setInstance($this);
+        $this->instance('app', $this);
+        $this->instance(Container::class, $this);
+    }
     }
 
     public function terminate()
